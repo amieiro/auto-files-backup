@@ -11,35 +11,16 @@ $afb_version = "0.1.0.0";
 
 // Where to create the backups; It should already exist
 $afb_backup_origin_dir_recursive = array(
-    //"/var/www",
-    //"/home/",
+    "/var/www",
 );
   
 $afb_backup_origin_dir = array(
     "/etc/",
-    "/boot",
-    "/home/user1/",
-    "/var/www/pruebas/",
-    "/home/user1",
-    "/home/user2",
-    "/boot/user2",
-    "/boot/",
-    "/var/www/demo.fontethemes.com/",
-    "/etc",
-    "/var/www/pruebas/tmp1/tmp1",
-    "/var/www/pruebas/tmp2/tmp1",
-    "/var/www/pruebas/tmp2/tmp1/",
-    "/var/www/pruebas/tmp1/tmp1/",
-    "/var/www/demo.fontethemes.com/",
+    "/var/spool/cron/crontabs/",
 );
 
 $afb_backup_origin_exclude_dir = array(
     "/boot",
-    "/home/user1",
-    "/etc/",
-    "/home/user1",
-    "/boot/",
-    "/etc/",
 );
 
 $afb_backup_destination_dir = "data";
@@ -53,17 +34,12 @@ $afb_backup_destination_dir = "data";
 //  Set to 0 to disable monthly backups.
 $afb_do_monthly = array(
     01,
-    07,
-    15,
-    16,
-    22,
 );
 
 // Which day do you want weekly backups? (0 to 6 where 0 is Sunday)
 // Set empty to disable weekly backups: $afb_do_weekly = array();
 $afb_do_weekly = array(
-    3,
-    5,
+    6,
 );
 
 // Set rotation of daily backups. VALUE*24hours
@@ -76,13 +52,15 @@ $afb_rotation_weekly=35;
 // Set rotation for monthly backups. VALUE*24hours
 $afb_rotation_monthly=150;
 
-
+// todo
 // Should we email results? Also should we email critical errors?  false, true
 $afb_send_email=true;
 
-// EMAIL address to send results 
+// todo
+// EMAIL address to send results
 $afb_email_address="foo@bar.com";
 
+// todo
 // Email Subject
 $afb_email_subject ="Backup done"; //todo put hostname 
 
